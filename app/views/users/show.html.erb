@@ -1,0 +1,8 @@
+<%= provide(:title, @user.email) %>
+<h1>
+   <%= @user.first_name %> <%= @user.last_name%>
+</h1>
+<center>
+   <%= image_tag @user.photo.url %>
+   <%= @user.email %>
+</center>
