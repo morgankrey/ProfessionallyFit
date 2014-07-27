@@ -1,7 +1,16 @@
-<div class="center hero-unit">
+<% if signed_in? %>
    <h1>Professionally Fit</h1>
-   <h2>
-      Home page for Professionally Fit
-   </h2>
-   <%= link_to "Sign up now!", signup_path, class: 'btn btn-large btn-primary' %>
-</div>
+   <div class="row">
+      <aside class="span12">
+         <%= render 'shared/feed' %>
+      </aside>
+   </div>
+<% else %>
+   <div class="center hero-unit">
+      <h1>Professionally Fit</h1>
+      <h2>
+         Home page for Professionally Fit
+      </h2>
+      <%= link_to "Sign up now!", signup_path, class: 'btn btn-large btn-primary' %>
+   </div>
+<% end %>

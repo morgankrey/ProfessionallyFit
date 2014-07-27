@@ -18,5 +18,10 @@ namespace :db do
                    password: password,
                    password_confirmation: password)
     end
+    user = User.first
+    20.times do
+      content = Faker::Lorem.paragraph(10)
+      user.posts.create!(content: content)
+    end
   end
 end
