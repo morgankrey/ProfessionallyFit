@@ -23,6 +23,11 @@
          <%= f.label :photo, "Upload photo" %>
          <%= f.file_field :photo %>
 
+         <% if current_user.admin? %>
+            <%= f.label :mealplan, "Upload meal plan" %>
+            <%= f.file_field :mealplan %>
+         <% end %>
+
          <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
       <% end %>
    </div>
