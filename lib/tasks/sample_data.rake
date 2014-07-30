@@ -21,7 +21,7 @@ namespace :db do
     user = User.first
     20.times do
       content = Faker::Lorem.paragraph(10)
-      user.posts.create!(content: content)
+      user.posts.create!(content: content, blog: true)
     end
   end
 end

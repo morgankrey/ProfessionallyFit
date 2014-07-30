@@ -5,12 +5,16 @@
          <nav>
             <ul class="nav pull-right">
                <li><%= link_to "Home", root_path %></li>
-               <li><%= link_to "Help", help_path %></li>
+               <li><%= link_to "News", news_path %></li>
+               <li><%= link_to "Blog", blog_path %></li>
+               <li><%= link_to "Training", training_path %></li>
+               <li><%= link_to "Nutrition", nutrition_path %></li>
+               <li><%= link_to "Supplements", supplements_path %></li>
                <% if admin_user? %>
                   <li><%= link_to "New Post", new_post_path %></li>
+                  <li><%= link_to "Users", users_path %></li>
                <% end %>
                <% if signed_in? %>
-                  <li><%= link_to "Users", users_path %></li>
                   <li id="fat-menu" class="dropdown">
                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         Account <b class="caret"></b>
