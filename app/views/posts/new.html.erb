@@ -12,20 +12,26 @@
          <%= f.label :content %>
          <%= f.text_area :content, size:1000 %>
 
-         <%= f.label :news %>
          <%= f.check_box :news %>
+         <%= f.label :news, class: 'checkbox inline' %>
+         </br>
 
-         <%= f.label :blog %>
          <%= f.check_box :blog %>
+         <%= f.label :blog, class: 'checkbox inline' %>
+         </br>
 
-         <%= f.label :training %>
          <%= f.check_box :training %>
+         <%= f.label :training, class: 'checkbox inline' %>
+         </br>
 
-         <%= f.label :nutrition %>
          <%= f.check_box :nutrition %>
+         <%= f.label :nutrition, class: 'checkbox inline' %>
+         </br>
 
-         <%= f.label :supplements %>
          <%= f.check_box :supplements %>
+         <%= f.label :supplements, class: 'checkbox inline' %>
+         </br>
+         </br>
 
          <%= f.submit "Create post", class: "btn btn-large btn-primary" %>
       <% end %>

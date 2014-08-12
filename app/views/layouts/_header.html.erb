@@ -4,15 +4,15 @@
          <%= link_to "Logo Standin", root_path, id: "logo" %>
          <nav>
             <ul class="nav pull-right">
-               <li><%= link_to "Home", root_path %></li>
-               <li><%= link_to "News", news_path %></li>
-               <li><%= link_to "Blog", blog_path %></li>
-               <li><%= link_to "Training", training_path %></li>
-               <li><%= link_to "Nutrition", nutrition_path %></li>
-               <li><%= link_to "Supplements", supplements_path %></li>
+               <li><%= link_to "Home", root_path, class: 'navbar-link' %></li>
+               <li><%= link_to "News", news_path, class: 'navbar-link' %></li>
+               <li><%= link_to "Blog", blog_path, class: 'navbar-link' %></li>
+               <li><%= link_to "Training", training_path, class: 'navbar-link' %></li>
+               <li><%= link_to "Nutrition", nutrition_path, class: 'navbar-link' %></li>
+               <li><%= link_to "Supplements", supplements_path, class: 'navbar-link' %></li>
                <% if admin_user? %>
-                  <li><%= link_to "New Post", new_post_path %></li>
-                  <li><%= link_to "Users", users_path %></li>
+                  <li><%= link_to "New Post", new_post_path, class: 'navbar-link' %></li>
+                  <li><%= link_to "Users", users_path, class: 'navbar-link' %></li>
                <% end %>
                <% if signed_in? %>
                   <li id="fat-menu" class="dropdown">
@@ -29,7 +29,7 @@
                      </ul>
                   </li>
                <% else %>
-                  <li><%= link_to "Sign in", signin_path %></li>
+                  <li><%= link_to "Sign in", signin_path, class: 'navbar-link' %></li>
                <% end %>
             </ul>
          </nav>
