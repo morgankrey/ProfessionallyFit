@@ -52,7 +52,20 @@ class UsersController < ApplicationController
                                    :email,
                                    :password,
                                    :password_confirmation,
-                                   :photo)
+                                   :photo,
+                                   :mealplan,
+                                   :age,
+                                   :sex,
+                                   :height,
+                                   :goal,
+                                   :job_type,
+                                   :work_schedule,
+                                   :current_weight,
+                                   :desired_weight,
+                                   :meals_per_day,
+                                   :snacks_per_day,
+                                   :body_fat_pct,
+                                   :plan_type)
     end
 
     # Before filters

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140730220922) do
+ActiveRecord::Schema.define(version: 20140812154308) do
 
   create_table "posts", force: true do |t|
     t.text     "content"
@@ -44,6 +44,18 @@ ActiveRecord::Schema.define(version: 20140730220922) do
     t.string   "mealplan_content_type"
     t.integer  "mealplan_file_size"
     t.datetime "mealplan_updated_at"
+    t.integer  "age"
+    t.string   "sex"
+    t.integer  "height"
+    t.string   "goal"
+    t.string   "job_type"
+    t.string   "work_schedule"
+    t.integer  "current_weight"
+    t.integer  "desired_weight"
+    t.integer  "meals_per_day"
+    t.integer  "snacks_per_day"
+    t.integer  "body_fat_pct"
+    t.string   "plan_type"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

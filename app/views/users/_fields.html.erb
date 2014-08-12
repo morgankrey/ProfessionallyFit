@@ -1,0 +1,80 @@
+<%= render 'shared/error_messages', object: f.object %>
+
+<%= f.label :first_name %>
+<%= f.text_field :first_name %>
+
+<%= f.label :last_name %>
+<%= f.text_field :last_name %>
+
+<%= f.label :email %>
+<%= f.text_field :email %>
+
+<%= f.label :password %>
+<%= f.password_field :password %>
+
+<%= f.label :password_confirmation, "Confirm Password" %>
+<%= f.password_field :password_confirmation %>
+
+<%= f.label :age, "Age" %>
+<%= f.number_field :age, min: 14, max: 100, step: 1 %>
+
+<%= f.label :sex, "Sex" %>
+<%= f.select :sex, [['Male','M'],
+                    ['Female','F'],
+                    ['Other','O']] %>
+
+<%= f.label :height, "Height (inches)" %>
+<%= f.number_field :height, min: 24, max: 100, step: 1 %>
+
+<%= f.label :goal, "Fitness Goal" %>
+<%= f.select :goal, [['Fat Loss','Fat Loss'],
+                    ['Maintenance','Maintenance'],
+                    ['Muscle Gain','Muscle Gain'],
+                    ['Tone', 'Tone']] %>
+
+<%= f.label :job_type, "Job Type" %>
+<%= f.select :job_type, [['Full-Time Student','Full-Time Student'],
+                        ['Full-Time Job - Desk Job','Full-Time Job - Desk Job'],
+                        ['Full-Time Job - Moderate Activity (nursing, assembly line, etc.)','Full-Time Job - Moderate Activity (nursing, assembly line, etc.)'],
+                        ['Full-Time Job - Heavy Activity (construction, factory, etc.)', 'Full-Time Job - Heavy Activity (construction, factory, etc.)'],
+                        ['Unemployed','Unemployed']] %>
+
+<%= f.label :work_schedule, "Work Schedule" %>
+<%= f.select :work_schedule, [['Shift Work','Shift Work'],
+                              ['Nine to Five','Nine to Five'],
+                              ['Part Time','Part Time'],
+                              ['Work from Home', 'Work from Home'],
+                              ['Stay At Home Mom/Dad','Stay At Home Mom/Dad'],
+                              ['Rotating (eg. 7 days on, 7 days off)','Rotating (eg. 7 days on, 7 days off)']] %>
+
+<%= f.label :current_weight, "Current Weight (pounds)" %>
+<%= f.number_field :current_weight, min: 50, max: 1000, step: 1 %>
+
+<%= f.label :desired_weight, "Desired Weight (pounds)" %>
+<%= f.number_field :desired_weight, min: 50, max: 1000, step: 1 %>
+
+<%= f.label :meals_per_day, "Current Number of Meals per day" %>
+<%= f.number_field :meals_per_day, min: 0, max: 20, step: 1 %>
+
+<%= f.label :snacks_per_day, "Current Number of Snacks per day" %>
+<%= f.number_field :snacks_per_day, min: 0, max: 20, step: 1 %>
+
+<%= f.label :body_fat_pct, "Current Body Fat Percentage (optional)" %>
+<%= f.number_field :body_fat_pct, min: 0, max: 50, step: 1 %>
+
+<%= f.label :plan_type, "Type of Plan Desired" %>
+<%= f.select :plan_type, [['6 Week','6 Week'],
+                          ['12 Week','12 Week'],
+                          ['24 Week','24 Week'],
+                          ['36 Week','36 Week']] %>
+
+<%= f.label :photo, "Upload new photo" %>
+<%= f.file_field :photo %>
+
+
+<% if signed_in? %>
+   <% if current_user.admin? %>
+      <%= f.label :mealplan, "Upload meal plan" %>
+      <%= f.file_field :mealplan %>
+   <% end %>
+<% end %>
