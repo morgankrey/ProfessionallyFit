@@ -30,6 +30,7 @@ class PostsController < ApplicationController
                                       :blog,
                                       :nutrition,
                                       :training,
-                                      :supplements)
+                                      :supplements,
+                                      :title)
       end
 end

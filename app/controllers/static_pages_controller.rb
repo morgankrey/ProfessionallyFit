@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
    before_action :signed_in_user, only: [:blog, :news, :nutrition, :training, :supplements]
+   before_action :admin_user, only: [:stats]
 
    def home
       if signed_in?
@@ -34,5 +35,10 @@ class StaticPagesController < ApplicationController
 
    def supplements
       @feed_items = Post.where(supplements: true).paginate(page: params[:page]).limit(10)
+   end
+
+   def stats
+      @user_count = User.count
+      @user_average_age = User.average(:age)
    end
 end

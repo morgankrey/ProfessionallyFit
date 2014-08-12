@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140812154308) do
+ActiveRecord::Schema.define(version: 20140812180355) do
 
   create_table "posts", force: true do |t|
     t.text     "content"
@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 20140812154308) do
     t.boolean  "nutrition",   default: false
     t.boolean  "training",    default: false
     t.boolean  "supplements", default: false
+    t.string   "title"
   end
 
   add_index "posts", ["user_id", "created_at"], name: "index_posts_on_user_id_and_created_at"

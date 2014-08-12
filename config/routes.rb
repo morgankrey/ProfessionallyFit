@@ -15,4 +15,5 @@ ProfessionallyFit::Application.routes.draw do
   match '/training',    to: 'static_pages#training',    via: 'get'
   match '/supplements', to: 'static_pages#supplements', via: 'get'
   match '/nutrition',   to: 'static_pages#nutrition',   via: 'get'
+  match '/stats',       to: 'static_pages#stats',       via: 'get'
 end
