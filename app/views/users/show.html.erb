@@ -3,13 +3,25 @@
    <%= @user.first_name %> <%= @user.last_name%>
 </h1>
 <div class="row">
-   <div class="span4">
       <center>
-         <%= image_tag @user.photo.url %>
-         <%= @user.email %>
+         <%= image_tag @user.photo.url %></br>
+         <strong>Name:</strong> <%= @user.first_name %> <%= @user.last_name %></br>
+         <strong>Email:</strong> <%= @user.email %></br>
+         <strong>Age:</strong> <%= @user.age %></br>
+         <strong>Sex:</strong> <%= @user.sex %></br>
+         </br>
+         <strong>Height:</strong> <%= @user.height %></br>
+         <strong>Current Weight:</strong> <%= @user.current_weight %></br>
+         <strong>Desired Weight:</strong> <%= @user.desired_weight %></br>
+         <strong>Body Fat Percentage:</strong> <% if @user.body_fat_pct != nil %><%= @user.body_fat_pct %>%<% else %>Not Reported<%end%></br>
+         </br>
+         <strong>Job Type:</strong> <%= @user.job_type %></br>
+         <strong>Work Schedule:</strong> <%= @user.work_schedule %></br>
+         <strong>Meals Per Day:</strong> <%= @user.meals_per_day %></br>
+         <strong>Snacks Per Day:</strong> <%= @user.snacks_per_day %></br>
+         <strong>Plan Type:</strong> <%= @user.plan_type %></br>
       </center>
-   </div>
-   <div class="span8">
+<!--    <div class="span8">
       <% if @user.posts.any? %>
          <h3>Posts (<%= @user.posts.count %>)</h3>
          <ul class="posts">
@@ -17,5 +29,5 @@
          </ul>
          <%= will_paginate @posts %>
       <% end %>
-   </div>
+   </div> -->
 </div>
